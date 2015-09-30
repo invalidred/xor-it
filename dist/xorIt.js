@@ -20,9 +20,11 @@ var xorIt = function xorIt(key, textOrCipher) {
 
   var cipher = [],
       keyLength = key.length,
-      fromCharCode = String.fromCharCode;
+      fromCharCode = String.fromCharCode,
+      len = textOrCipher.length,
+      i = 0;
 
-  for (var i = 0, len = textOrCipher.length; i < len; i++) {
+  for (; i < len; ++i) {
     cipher.push(fromCharCode(key.charCodeAt(i % keyLength) ^ textOrCipher.charCodeAt(i)));
   }
 
