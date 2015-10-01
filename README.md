@@ -28,7 +28,7 @@ var originalText = xorIt('your-key-here', cipher);
 
 ## Run Code Sample
 
-`npm start`
+`node example.js`
 
 ## Tests
 
