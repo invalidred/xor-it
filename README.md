@@ -25,10 +25,18 @@ var xorIt = require('xor-it');
 var originalText = xorIt('your-key-here', cipher);
 
  ```
+ 
+### ES2015 Example
+
+```javascript
+import xorIt from 'xor-it';
+
+const cipher = xorIt('you-key-here', 'some-text');
+```
 
 ## Run Code Sample
 
-`node example.js`
+`npm run example`
 
 ## Tests
 
@@ -41,6 +49,7 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Release History
 
+* 2016-03-08    1.0.2 Minor code improvements  
 * 2015-09-30    1.0.1 Added tests  
 * 2015-09-29    1.0.0 Initial release  
 
@@ -48,4 +57,4 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 MIT license; see [LICENSE](./LICENSE).
 
-(c) 2015 by Abdul Khan and Alexey Novak
+(c) 2015-2016 by Abdul Khan and Alexey Novak
