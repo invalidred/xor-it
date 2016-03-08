@@ -1,7 +1,3 @@
-
-/*global console*/
-'use strict';
-
 /**
  * xorIt is a utility function that takes a key and a text/cipher
  * If the text is a simple string it will retun a cipher
@@ -10,26 +6,27 @@
  * http://cwestblog.com/2013/08/19/javascript-simple-vernam-cipher/
  */
 
+'use strict';
+
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
-var xorIt = function xorIt(key, textOrCipher) {
+exports['default'] = xorIt;
+
+function xorIt(key, textOrCipher) {
   if (!key || !textOrCipher) {
     throw 'XorIt: needs key and textOrCipher';
   }
 
-  var cipher = [],
-      keyLength = key.length,
-      fromCharCode = String.fromCharCode,
-      len = textOrCipher.length,
-      i = 0;
+  var cipher = [];
+  var keyLength = key.length;
+  var fromCharCode = String.fromCharCode;
 
-  for (; i < len; ++i) {
+  for (var i = 0; i < textOrCipher.length; ++i) {
     cipher.push(fromCharCode(key.charCodeAt(i % keyLength) ^ textOrCipher.charCodeAt(i)));
   }
 
   return cipher.join('');
-};
+}
 
-exports['default'] = xorIt;
 module.exports = exports['default'];
